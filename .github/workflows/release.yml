@@ -17,6 +17,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@high-standards-nodejs'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.READ_PACKAGES_PAT}}
       - name: Release
         run: npx semantic-release
