@@ -16,8 +16,6 @@ jobs:
           node-version: 12
       - name: npmrc
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
-      - name: ls
-        run: cat .npmrc
       - name: Install dependencies
         run: npm install
         env:
