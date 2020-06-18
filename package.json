@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/high-standards-js/typescript-node#readme",
   "dependencies": {
-    "latest-version": "^5.1.0"
+    "latest-version": "^5.1.0",
+    "@high-standards-js/base": "^1.2.2"
   },
   "devDependencies": {
-    "@high-standards-js/base": "^1.2.2",
     "@semantic-release/commit-analyzer": "8.0.1",
     "@semantic-release/github": "7.0.7",
     "@semantic-release/npm": "7.0.5",
