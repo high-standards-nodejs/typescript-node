@@ -1,5 +1,6 @@
 const base = require('@high-standards-nodejs/base');
 const path = require('path');
+const latestVersion = require('latest-version');
 
 (async() => {
     await base.checkAcceptedHighStandards();
@@ -14,7 +15,7 @@ const path = require('path');
             __dirname, 
             'package.json', 
             {
-                newestTypescriptVersion: "1.0.0",
+                newestTypescriptVersion: await latestVersion('typescript'),
                 nodeEngineVersion: `${packageJsonOfConfig.engines.node.replace(/^\W+/, '')}`
             }
         )
