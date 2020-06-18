@@ -16,7 +16,7 @@ const latestVersion = require('latest-version');
             'package.json', 
             {
                 newestTypescriptVersion: await latestVersion('typescript'),
-                nodeEngineVersion: `${packageJsonOfConfig.engines.node.replace(/^\W+/, '')}`
+                nodeEngineVersion: `${await latestVersion('@types/node')}`
             }
         )
     );
