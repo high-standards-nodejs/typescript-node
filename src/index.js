@@ -1,4 +1,4 @@
-const base = require('@high-standards-nodejs/base');
+const base = require('@high-standards-js/base');
 const path = require('path');
 const latestVersion = require('latest-version');
 
