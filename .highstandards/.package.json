@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+      "typescript": "${newestTypescriptVersion}",
+      "@types/node": "${nodeEngineVersion}"
+    }
+  }
