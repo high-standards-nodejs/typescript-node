@@ -30,7 +30,6 @@ const latestVersion = require('latest-version');
     .forEach((packageName) => {
         packageJsonOfConfig.dependencies[packageName] = templateContent.dependencies[packageName];
     })
-    console.log(process.versions.node)
     base.writeFile(
         path.join(
             base.getProjectRoot(), 
