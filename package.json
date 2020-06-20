@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/high-standards-js/typescript-node#readme",
   "dependencies": {
-    "latest-version": "^5.1.0",
-    "@high-standards-js/base": "^1.2.2"
+    "@high-standards-js/base": "^1.7.7",
+    "latest-version": "^5.1.0"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "8.0.1",
@@ -26,14 +26,29 @@
     "@semantic-release/npm": "7.0.5",
     "@semantic-release/release-notes-generator": "9.0.1",
     "husky": "4.2.5",
-    "semantic-release": "17.0.8"
+    "semantic-release": "17.0.8",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5",
+    "commitlint": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "git-authors-cli": "1.0.27"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{ts,js,json,css,yaml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=12.16.1"
   }
 }
